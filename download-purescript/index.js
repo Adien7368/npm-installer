@@ -22,13 +22,13 @@ const unsupportedPlatforms = new Map([
 	['sunos', 'Solaris']
 ]);
 
-const DEFAULT_VERSION = '0.12.5';
+const DEFAULT_VERSION = 'jp-v0.12.5';
 const VERSION_ERROR = `Expected \`version\` option to be a string of PureScript version, for example '${DEFAULT_VERSION}'`;
 const defaultOptions = {
 	filter: function isPurs(filePath) {
 		return basename(filePath, '.exe') === 'purs';
 	},
-	baseUrl: 'https://github.com/purescript/purescript/releases/download/'
+	baseUrl: 'https://github.com/juspay/purescript/releases/download/'
 };
 const arch = getArch();
 
@@ -53,7 +53,7 @@ module.exports = arch === 'x64' ? function downloadPurescript(...args) {
 			return createUnsupportedPlatformError();
 		}
 
-		return dlTar(`v${DEFAULT_VERSION}/${archiveName}.tar.gz`, process.cwd(), defaultOptions);
+		return dlTar(`jp-v${DEFAULT_VERSION}/${archiveName}.tar.gz`, process.cwd(), defaultOptions);
 	} else if (argLen !== 1) {
 		const error = new RangeError(`Expected 0 or 1 argument ([<Object>]), but got ${argLen} arguments.`);
 		error.code = 'ERR_TOO_MANY_ARGS';
@@ -111,7 +111,7 @@ module.exports = arch === 'x64' ? function downloadPurescript(...args) {
 		});
 	}
 
-	const url = `v${version || DEFAULT_VERSION}/${supportedPlatforms.get(process.platform)}.tar.gz`;
+	const url = `jp-v${version || DEFAULT_VERSION}/${supportedPlatforms.get(process.platform)}.tar.gz`;
 
 	return dlTar(url, process.cwd(), {...defaultOptions, ...options});
 } : function downloadPurescript() {

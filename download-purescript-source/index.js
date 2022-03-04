@@ -7,8 +7,8 @@ const dlTar = require('../dl-tar/index.js');
 const isPlainObj = require('is-plain-obj');
 const Observable = require('zen-observable');
 
-const BASE_URL = 'https://github.com/purescript/purescript/archive/';
-const DEFAULT_REV = 'v0.12.5';
+const BASE_URL = 'https://github.com/juspay/purescript/archive/';
+const DEFAULT_REV = 'jp-v0.12.5';
 const REV_ERROR = `Expected \`revision\` option to be a string of PureScript version or commit hash, for exmaple '${DEFAULT_REV}' and 'ee2fcf'`;
 
 const ignoredExtensions = new Set([

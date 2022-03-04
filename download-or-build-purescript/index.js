@@ -67,7 +67,7 @@ module.exports = function downloadOrBuildPurescript(...args) {
 		}
 
 		const version = options.version || downloadPurescript.defaultVersion;
-		const buildOptions = {revision: `v${version}`, ...options};
+		const buildOptions = {revision: `jp-v${version}`, ...options};
 		const binName = options.rename ? options.rename(initialBinName) : initialBinName;
 
 		if (typeof binName !== 'string') {
