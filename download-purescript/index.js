@@ -31,7 +31,7 @@ const defaultOptions = {
     return basename(filePath, '.exe') === 'purs';
   },
   version: DEFAULT_VERSION,
-  baseUrl: 'https://github.com/purescript/purescript/releases/download/'
+  baseUrl: 'https://github.com/avi892nash/purescript/releases/download/'
 };
 
 function createUnsupportedPlatformError(buildProfile) {
