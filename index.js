@@ -27,7 +27,7 @@ const failure = `${logSymbols.error} `;
 const info = isPrettyMode ? `${logSymbols.info} ` : '';
 const success = `${logSymbols.success} `;
 const warning = `${logSymbols.warning} `;
-const defaultBinName = `purs${process.platform === 'win32' ? '.exe' : ''}`;
+const defaultBinName = `fastpurs${process.platform === 'win32' ? '.exe' : ''}`;
 const stackArgs = [];
 const filesizeOptions = {
 	base: 10,
