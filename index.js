@@ -87,9 +87,9 @@ if (argv.version) {
 
 if (!argv.name) {
 	try {
-		const {purs} = require(resolve('package.json')).bin;
+		const {fastpurs} = require(resolve('package.json')).bin;
 
-		argv.name = purs !== undefined ? purs : defaultBinName;
+		argv.name = fastpurs !== undefined ? fastpurs : defaultBinName;
 	} catch(_) {
 		argv.name = defaultBinName;
 	}
